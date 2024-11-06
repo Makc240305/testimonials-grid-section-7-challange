@@ -163,7 +163,7 @@ body {
     display: grid;
     gap: 1.875rem;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: auto;
     grid-template-areas: "blog1 blog1 blog2"
                          "blog3 blog4 blog4"
                          "blog5 blog5 blog5 " ;
@@ -179,7 +179,7 @@ body {
 @media screen and (min-width: 60em) {
   .blog-grid{
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: auto;
     grid-template-areas: "blog1 blog1 blog2 blog5"
                          "blog3 blog4 blog4 blog5" ;
   }
