@@ -5,7 +5,7 @@
   font-family: 'Barlow Semi Condensed';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/barlow-semi-condensed-v15-latin-regular.woff2') format('woff2');
+  src: url('fonts/barlow-semi-condensed-v15-latin-regular.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -16,7 +16,7 @@
   font-family: 'Barlow Semi Condensed';
   font-style: normal;
   font-weight: 500;
-  src: url('/fonts/barlow-semi-condensed-v15-latin-500.woff2') format('woff2');
+  src: url('fonts/barlow-semi-condensed-v15-latin-500.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -27,7 +27,7 @@
   font-family: 'Barlow Semi Condensed';
   font-style: normal;
   font-weight: 600;
-  src: url('/fonts/barlow-semi-condensed-v15-latin-600.woff2') format('woff2');
+  src: url('fonts/barlow-semi-condensed-v15-latin-600.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -127,7 +127,7 @@ body {
 
 .blog:nth-child(1){
   background-color: var(--Moderateviolet);
-  background-image:url(/images/bg-pattern-quotation.svg);
+  background-image:url(images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: 88% top ;
   grid-area: blog1;
