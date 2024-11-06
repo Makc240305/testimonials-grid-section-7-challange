@@ -1,0 +1,186 @@
+/* barlow-semi-condensed-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/barlow-semi-condensed-v15-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* barlow-semi-condensed-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/barlow-semi-condensed-v15-latin-500.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* barlow-semi-condensed-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/barlow-semi-condensed-v15-latin-600.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+
+  --ff: 'Barlow Semi Condensed', sans-serif;
+  --ff-13px: 0.8125rem;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--ff-13px);
+  background-color: var(--Lightgrayishblue);
+  color: var(--White);
+  min-height: 100svh;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.blog-grid{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 4.625rem auto;
+  max-width: 69.375rem;
+}
+
+.blog {
+  border-radius: 0.5rem;
+  padding: 1.625rem 2rem 2rem 2rem;
+  box-shadow: 40px 60px 50px -47px hsl(0deg 0% 16% / 24%);
+}
+
+.blog__header {
+  display: flex;
+  align-items: center;
+}
+
+.blog__img {
+  height: 28px;
+  width: 28px;
+  border-radius: 100%;
+}
+
+.blog__caption {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.06rem;
+}
+
+.blog__name {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  margin-bottom: 0.25rem;
+}
+
+.blog__verified {
+  font-size: 0.6875rem;
+  opacity: 50%;
+}
+
+.blog__title {
+  margin-top: 1.125rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.blog__review {
+  opacity: 70%;
+  line-height: 1.125rem;
+}
+
+.blog:nth-child(1){
+  background-color: var(--Moderateviolet);
+  background-image:url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 88% top ;
+  grid-area: blog1;
+}
+.blog:nth-child(1) .blog__title{
+  margin-bottom: 2.5rem;
+}
+
+.blog:nth-child(2){
+  background-color: var(--Verydarkgrayishblue);
+  grid-area: blog2;
+}
+
+.blog:nth-child(3){
+  background-color: var(--White);
+  color: var(--Verydarkgrayishblue);
+  grid-area: blog3;
+}
+
+.blog:nth-child(4){
+  background-color: var(--Verydarkblackishblue);
+  grid-area: blog4;
+}
+
+.blog:nth-child(5){
+  background-color: var(--White);
+  color: var(--Verydarkgrayishblue);
+  grid-area: blog5;
+}
+
+@media screen and (min-width: 40em) {
+  .blog-grid{
+    display: grid;
+    gap: 1.875rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: "blog1 blog1 blog2"
+                         "blog3 blog4 blog4"
+                         "blog5 blog5 blog5 " ;
+  }
+  .blog:nth-child(1) .blog__title{
+    margin-bottom: 1rem;
+  }
+  .blog:nth-child(1){
+    background-position: 81% top ;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .blog-grid{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "blog1 blog1 blog2 blog5"
+                         "blog3 blog4 blog4 blog5" ;
+  }
+}
